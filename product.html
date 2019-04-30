@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Appliction for Coin</title>
+    <link rel="stylesheet" href="./src/main.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/coins.jpg" alt="Banner of coins.">
+    </header>
+
+    <main>
+        <h1>Tell us about your coin</h1>
+        <form id="coin-application">
+            <section>
+                <h2>Your Coins History</h2>
+
+                <p>
+                    <label for=""></label>
+                    <input class="text-input" id="year" type="text" name="year" placeholder="Year of coin" required>
+                    <input id="unknown-year" type="checkbox" name="unknown-year" value="unknown">
+                    <label for="unknown-year">Year Unknown</label>
+                </p>
+                <label class="continent" for="continent">What continent is your coin from?</label>
+                <select id="continent" name="continent" required>
+                    <option value="" hidden disabled selected>Select a role</option>
+                    <option value="north-america">North America</option>
+                    <option value="south-america">South America</option>
+                    <option value="europe">Europe</option>
+                    <option value="asia">Asia</option>
+                    <option value="middle-east">Middle East</option>
+                    <option value="africa">Africa</option>
+                </select>
+            </section>
+
+            <section>
+                <h2>Qualities of Your Coin</h2>
+
+                <fieldset>
+                    <legend>Is your coin gold?</legend>
+
+                    <input required id="yesGold" type="radio" value="yes" name="gold">
+                    <label for="yesGold">Yes</label>
+    
+                    <input required id="noGold" type="radio" value="no" name="gold">
+                    <label for="noGold">No</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Is it one or more materials?</legend>
+
+                    <input required id="yesMulti" type="radio" value="yes" name="multiMaterial">
+                    <label for="yesMulti">Yes</label>
+    
+                    <input required id="noMulti" type="radio" value="no" name="multiMaterial">
+                    <label for="noMulti">No</label>
+                </fieldset> 
+                
+                <fieldset>
+                    <legend>
+                        What materails comprise your coin?
+                    </legend>
+
+                    <div>
+                        <input name="material" value="gold" type="checkbox" id="gold">
+                        <label for="gold">Gold</label>
+                    </div>
+    
+                    <div>
+                        <input name="material" value="silver" type="checkbox" id="silver">
+                        <label for="silver">Silver</label>
+                    </div>
+    
+                    <div>
+                        <input name="material" value="copper" type="checkbox" id="copper">
+                        <label for="copper">Copper</label>
+                    </div>
+    
+                    <div>
+                        <input name="material" value="nickel" type="checkbox" id="nickel">
+                        <label for="nickel">Nickel</label>
+                    </div>
+
+                    <div>
+                        <input name="material" value="brass" type="checkbox" id="brass">
+                        <label for="brass">Brass</label>
+                    </div>
+
+                    <div>
+                        <input name="material" value="steel" type="checkbox" id="steel">
+                        <label for="steel">Steel</label>
+                    </div>
+
+                    <div>
+                        <input name="material" value="zinc" type="checkbox" id="zinc">
+                        <label for="zinc">Zinc</label>
+                    </div>
+                </fieldset>
+
+                <p></p>
+                    <label for="condition">What condition is your coin in?</label>
+                    <input type="range" name="condition" id="condition" min="1" max="10" required>
+                    <span id="condition-display">5</span>
+                </p>
+            </section>
+
+            <section id="button">
+                <h2>Send Us the Coin</h2>
+                <button>Submit</button>
+            </section>
+        </form>
+    </main>
+    <script type="module" src="./src/product.js"></script>
+</body>
+</html>

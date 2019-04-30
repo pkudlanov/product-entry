@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+}
+main{
+    max-width: 550px;
+    margin: auto;
+}
+section{
+    padding-bottom: 20px;
+}
+fieldset{
+    padding-bottom: 20px;
+    border: none;
+}
+h1, h2{
+    text-align: center;
+}
+button{
+    width: 250px;
+    height: 30px;
+}
+#button{
+    text-align: center;
+}

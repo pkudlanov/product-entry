@@ -1,25 +1,29 @@
 const test = QUnit.test;
-import getApplicant from '../src/get-applicant.js';
+import getCoinApplication from '../src/get-coin-application.js';
 
-test('return completed form in object', function(assert) {
+test('Return completed form in object', function(assert) {
     const expected = {
-        name: 'josh',
-        is21: true,
-        cuisine: 'indian',
-        meals: ['breakfast', 'lunch'],
-        likeFood: 10,
+        year: 1455,
+        yearUnknown: '',
+        continent: 'south america',
+        goldOrNot: false,
+        multiMaterials: true,
+        whatMaterials: ['copper', 'nickel'],
+        condition: 10
     };
 
     const formData = new FormData();
-    formData.set('name', expected.name);
-    formData.set('is21', 'yes');
-    formData.set('cuisine', expected.cuisine);
-    formData.set('meals', expected.meals[0]);
-    formData.append('meals', expected.meals[1]);
-    formData.set('like-food', '10');
+    formData.set('year', expected.name);
+    formData.set('yearUnknown', expected.name);
+    formData.set('continent', expected.continent);
+    formData.set('goldOrNot', expected.goldOrNot);
+    formData.set('multiMaterials', 'yes');
+    formData.set('whatMaterials', expected.whatMaterials[0]);
+    formData.append('whatMaterials', expected.whatMaterials[1]);
+    formData.set('condition', '10');
 
-    const applicant = getApplicant(formData);
+    const application = getCoinApplication(formData);
 
-    assert.deepEqual(applicant, expected);
+    assert.deepEqual(application, expected);
 });
  
