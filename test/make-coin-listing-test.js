@@ -1,4 +1,4 @@
-import makeCoinApplication from '../src/make-coin-application.js';
+import makeCoinListing from '../src/make-coin-listing.js';
 
 const test = QUnit.test;
 
@@ -9,7 +9,7 @@ test('Return completed form in object', function(assert) {
         continent: 'south america',
         goldOrNot: true,
         multiMaterials: true,
-        whatMaterials: ['copper', 'nickel'],
+        material: ['copper', 'nickel'],
         condition: 10
     };
 
@@ -19,11 +19,11 @@ test('Return completed form in object', function(assert) {
     formData.set('continent', expected.continent);
     formData.set('gold', 'yes');
     formData.set('multiMaterials', 'yes');
-    formData.set('whatMaterials', expected.whatMaterials[0]);
-    formData.append('whatMaterials', expected.whatMaterials[1]);
+    formData.set('material', expected.material[0]);
+    formData.append('material', expected.material[1]);
     formData.set('condition', '10');
 
-    const application = makeCoinApplication(formData);
+    const listing = makeCoinListing(formData);
 
-    assert.deepEqual(application, expected);
+    assert.deepEqual(listing, expected);
 });

@@ -7,6 +7,7 @@
     <title>Appliction for Coin</title>
     <link rel="stylesheet" href="./src/main.css">
 </head>
+
 <body>
     <header>
         <img src="./assets/coins.jpg" alt="Banner of coins.">
@@ -14,7 +15,7 @@
 
     <main>
         <h1>Tell us about your coin</h1>
-        <form id="coin-application">
+        <form id="coin-listing">
             <section>
                 <h2>Your Coins History</h2>
 
@@ -24,6 +25,7 @@
                     <input id="unknown-year" type="checkbox" name="unknown-year" value="unknown">
                     <label for="unknown-year">Year Unknown</label>
                 </p>
+
                 <label class="continent" for="continent">What continent is your coin from?</label>
                 <select id="continent" name="continent" required>
                     <option value="" hidden disabled selected>Select a role</option>
@@ -114,6 +116,7 @@
         </form>
         <a href="./index.html">Homepage</a>
     </main>
-    <script type="module" src="./src/product-form.js"></script>
+
+    <script type="module" src="./src/listing-form.js"></script>
 </body>
 </html>
