@@ -50,7 +50,7 @@
                 </fieldset>
                 
                 <fieldset>
-                    <legend>Is it one or more materials?</legend>
+                    <legend>Is it made up of multiple materials?</legend>
 
                     <input required id="yesMulti" type="radio" value="yes" name="multiMaterial">
                     <label for="yesMulti">Yes</label>
@@ -100,9 +100,9 @@
                     </div>
                 </fieldset>
 
-                <p></p>
+                <p>
                     <label for="condition">What condition is your coin in?</label>
-                    <input type="range" name="condition" id="condition" min="1" max="10" required>
+                    <input id="condition" type="range" name="condition" min="1" max="10" required>
                     <span id="condition-display">5</span>
                 </p>
             </section>
@@ -112,7 +112,8 @@
                 <button>Submit</button>
             </section>
         </form>
+        <a href="./index.html">Homepage</a>
     </main>
-    <script type="module" src="./src/product.js"></script>
+    <script type="module" src="./src/product-form.js"></script>
 </body>
 </html>

@@ -7,11 +7,11 @@ function makeCoinApplication(formData){
 
     const application = {
         year: year,
-        yearUnknown: yearUnknown,
+        yearUnknown: year,
         continent: formData.get('continent'),
         goldOrNot: goldOrNot,
         multiMaterials: multiMaterials,
-        whatMaterials: formData.getAll('whatMaterials'),
+        material: formData.getAll('material'),
         condition: condition
     };
     return application;

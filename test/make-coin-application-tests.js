@@ -27,4 +27,3 @@ test('Return completed form in object', function(assert) {
 
     assert.deepEqual(application, expected);
 });
- 
