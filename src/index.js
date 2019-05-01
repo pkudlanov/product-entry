@@ -5,6 +5,6 @@ const form = document.getElementById('coin-application');
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
     const formData = new FormData(form);
-    const coinApplication = getCoinApplication(formData);
+    const coinApplication = makeCoinApplication(formData);
     console.log(coinApplication);
 })
