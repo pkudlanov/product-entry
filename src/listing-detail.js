@@ -5,7 +5,7 @@ const yearUnknown = document.getElementById('year-unknown');
 const continent = document.getElementById('continent');
 const goldOrNot = document.getElementById('yes-gold');
 const multiMaterial = document.getElementById('yes-multi');
-const composition = document.getElementById('composition');
+const composition = document.getElementsByName('composition');
 const condition = document.getElementById('condition');
 
 const listing = listingApi.get();
@@ -18,8 +18,10 @@ year.textContent = listing.year;
 yearUnknown.textContent = listing.yearUnknown;
 continent.textContent = listing.continent;
 goldOrNot.textContent = listing.goldOrNot;
-multiMaterial.textContent = listing.multiMaterial;
-composition.textContent = listing.composition;
+multiMaterial.textContent = listing.multiMaterials;
+if(listing.composition){
+    composition.textContent = listing.composition.join(', ');
+}
 condition.textContent = listing.condition;
 
 

@@ -17,17 +17,13 @@ form.addEventListener('submit', (event) =>{
     listingApi.save(listing);
 });
 
-let yearUnknown = document.getElementById('year-unknown');
-let yearInput = document.getElementById('year');
-console.log(yearUnknown.checked);
-console.log('hello');
-if(document.forms[0].yearUnknown.checked){
-    yearInput.setAttribute('disabled', false);
-}
 
-// function enable(id)
-// {
-//     var eleman = document.getElementById(id);
-//     eleman.setAttribute("disabled", false);
-//     eleman.setAttribute("editable", true);
+// let yearUnknown = document.getElementById('yearUnknown').checked;
+// let yearInput = document.getElementById('year');
+// console.log('Hi');
+// if(yearUnknown){
+//     yearInput.setAttribute('disabled', false);
+//     console.log('hello');
+// }else{
+//     console.log('hey');
 // }
