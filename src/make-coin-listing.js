@@ -1,8 +1,8 @@
 function makeCoinListing(formData){
     const year = parseInt(formData.get('year'));
-    const yearUnknown = formData.get('yearUnknown') === 'true';
-    const goldOrNot = formData.get('gold') === 'yes';
-    const multiMaterials = formData.get('multiMaterials') === 'yes';
+    const yearUnknown = formData.get('year-unknown');
+    const goldOrNot = formData.get('gold');
+    const multiMaterials = formData.get('yes-multi') === 'yes';
     const condition = parseInt(formData.get('condition'));
 
     const listing = {

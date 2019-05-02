@@ -21,10 +21,10 @@
                 <h2>Your Coins History</h2>
 
                 <p>
-                    <label for=""></label>
-                    <input class="text-input" id="year" type="text" name="year" placeholder="Year of coin" required>
-                    <input id="unknown-year" type="checkbox" name="unknown-year" value="unknown">
-                    <label for="unknown-year">Year Unknown</label>
+                    <label for="year"></label>
+                    <input class="text-input" id="year" type="number" name="year" placeholder="Year of coin">
+                    <input id="year-unknown" type="checkbox" name="yearUnknown" value="Year Unknown">
+                    <label for="year-unknown">Year Unknown</label>
                 </p>
 
                 <label class="continent" for="continent">What continent is your coin from?</label>
@@ -45,20 +45,20 @@
                 <fieldset>
                     <legend>Is your coin gold?</legend>
 
-                    <input required id="yesGold" type="radio" value="yes" name="gold">
+                    <input required id="yesGold" type="radio" value="Yes" name="gold">
                     <label for="yesGold">Yes</label>
     
-                    <input required id="noGold" type="radio" value="no" name="gold">
+                    <input required id="noGold" type="radio" value="No" name="gold">
                     <label for="noGold">No</label>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Is it made up of multiple materials?</legend>
 
-                    <input required id="yesMulti" type="radio" value="yes" name="multiMaterial">
+                    <input required id="yes-multi" type="radio" value="Yes" name="multiMaterial">
                     <label for="yesMulti">Yes</label>
     
-                    <input required id="noMulti" type="radio" value="no" name="multiMaterial">
+                    <input required id="no-multi" type="radio" value="No" name="multiMaterial">
                     <label for="noMulti">No</label>
                 </fieldset> 
                 

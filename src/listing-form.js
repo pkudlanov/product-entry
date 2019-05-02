@@ -16,3 +16,18 @@ form.addEventListener('submit', (event) =>{
     const listing = makeCoinListing(formData);
     listingApi.save(listing);
 });
+
+let yearUnknown = document.getElementById('year-unknown');
+let yearInput = document.getElementById('year');
+console.log(yearUnknown.checked);
+console.log('hello');
+if(document.forms[0].yearUnknown.checked){
+    yearInput.setAttribute('disabled', false);
+}
+
+// function enable(id)
+// {
+//     var eleman = document.getElementById(id);
+//     eleman.setAttribute("disabled", false);
+//     eleman.setAttribute("editable", true);
+// }

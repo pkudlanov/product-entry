@@ -1,0 +1,20 @@
+dl{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+dt, dd{
+    display: inline-block;
+    padding: 8px 10px;
+}
+dt{
+    background: rgb(243, 222, 190);
+    text-align: right;
+    padding-left: 30px;
+    font-size: 1em;
+}
+dd{
+    margin-left: 8px;
+}
+dt:after{
+    content: ":";
+}

@@ -1,7 +1,7 @@
 import listingApi from './listing-api.js'
 
 const year = document.getElementById('year');
-const unknownYear = document.getElementById('unknown year');
+const yearUnknown = document.getElementById('year-unknown');
 const continent = document.getElementById('continent');
 const goldOrNot = document.getElementById('yes-gold');
 const multiMaterial = document.getElementById('yes-multi');
@@ -15,9 +15,13 @@ if(!listing) {
 }
 
 year.textContent = listing.year;
-unknownYear.textContent = listing.unknownYear;
+yearUnknown.textContent = listing.yearUnknown;
 continent.textContent = listing.continent;
 goldOrNot.textContent = listing.goldOrNot;
 multiMaterial.textContent = listing.multiMaterial;
 composition.textContent = listing.composition;
 condition.textContent = listing.condition;
+
+
+
+console.log(listing);
