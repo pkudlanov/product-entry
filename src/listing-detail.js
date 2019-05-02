@@ -14,8 +14,12 @@ if(!listing) {
     window.location = './';
 }
 
-year.textContent = listing.year;
-yearUnknown.textContent = listing.yearUnknown;
+if(listing.yearUnknown === 'Year Unknown'){
+    year.textContent = listing.yearUnknown;
+}else{
+    year.textContent = listing.year;
+}
+
 continent.textContent = listing.continent;
 goldOrNot.textContent = listing.goldOrNot;
 multiMaterial.textContent = listing.multiMaterials;
