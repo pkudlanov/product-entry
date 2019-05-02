@@ -5,11 +5,11 @@ const test = QUnit.test;
 test('Return completed form in object', function(assert) {
     const expected = {
         year: 1455,
-        yearUnknown: true,
+        yearUnknown: 'true',
         continent: 'south america',
-        goldOrNot: true,
-        multiMaterials: true,
-        material: ['copper', 'nickel'],
+        goldOrNot: 'yes',
+        multiMaterial: 'yes',
+        composition: ['copper', 'nickel'],
         condition: 10
     };
 
@@ -18,9 +18,9 @@ test('Return completed form in object', function(assert) {
     formData.set('yearUnknown', true);
     formData.set('continent', expected.continent);
     formData.set('gold', 'yes');
-    formData.set('multiMaterials', 'yes');
-    formData.set('material', expected.material[0]);
-    formData.append('material', expected.material[1]);
+    formData.set('multiMaterial', 'yes');
+    formData.set('composition', expected.composition[0]);
+    formData.append('composition', expected.composition[1]);
     formData.set('condition', '10');
 
     const listing = makeCoinListing(formData);
