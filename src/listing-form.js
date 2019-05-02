@@ -18,10 +18,22 @@ form.addEventListener('submit', (event) =>{
 });
 
 
-// let yearUnknown = document.getElementById('yearUnknown').checked;
+
+
+
+// let yearUnknown = document.getElementById('yearUnknown');
 // let yearInput = document.getElementById('year');
-// console.log('Hi');
-// if(yearUnknown){
+
+// yearUnknown.addEventListener('change', function(){
+//     if(yearUnknown.checked){
+//         yearInput.setAttribute('disabled', false);
+//     }else{
+//         yearInput.setAttribute('disabled') = true;
+//     }
+// })
+
+// console.log('Hi', yearUnknown.checked);
+// if(yearUnknown.checked){
 //     yearInput.setAttribute('disabled', false);
 //     console.log('hello');
 // }else{
