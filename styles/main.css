@@ -1,6 +1,20 @@
 body{
     margin: 0;
 }
+header{
+    color: rgb(168, 115, 0);
+    background-color: gold;
+    
+}
+header > h1{
+    padding-bottom: 6px;
+    margin: auto;
+    font-size: 2.8em;
+}
+.coins{
+    max-width: 100%;
+    height: auto;
+}
 main{
     max-width: 550px;
     margin: auto;
@@ -21,4 +35,8 @@ button{
 }
 #button{
     text-align: center;
+}
+.something{
+    font-size: 1.4em;
+    margin: 20px;
 }

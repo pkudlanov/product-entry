@@ -1,6 +1,7 @@
-import makeCoinApplication from './make-coin-application.js'
+import makeCoinListing from './make-coin-listing.js'
+import listingApi from './listing-api.js'
 
-const form = document.getElementById('coin-application');
+const form = document.getElementById('coin-listing');
 
 const conditionSlider = document.getElementById('condition');
 const conditionDisplay = document.getElementById('condition-display');
@@ -12,6 +13,8 @@ conditionSlider.addEventListener('change', function() {
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
     const formData = new FormData(form);
-    const coinApplication = makeCoinApplication(formData);
-    console.log(coinApplication);
-})
+    const listing = makeCoinListing(formData);
+    listingApi.save(listing);
+
+    window.location = '../thank-you.html';
+});

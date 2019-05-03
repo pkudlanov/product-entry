@@ -5,34 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Appliction for Coin</title>
-    <link rel="stylesheet" href="./src/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/listing-form.css">
 </head>
+
 <body>
     <header>
-        <img src="./assets/coins.jpg" alt="Banner of coins.">
+        <img class="coins" src="./assets/coins.jpg" alt="Banner of coins.">
+        <h1>Tell us about your coin</h1>
     </header>
 
     <main>
-        <h1>Tell us about your coin</h1>
-        <form id="coin-application">
+        <form id="coin-listing">
             <section>
                 <h2>Your Coins History</h2>
 
                 <p>
-                    <label for=""></label>
-                    <input class="text-input" id="year" type="text" name="year" placeholder="Year of coin" required>
-                    <input id="unknown-year" type="checkbox" name="unknown-year" value="unknown">
-                    <label for="unknown-year">Year Unknown</label>
+                    <label for="year"></label>
+                    <input class="text-input" id="year" type="number" name="year" placeholder="Year of coin">
+                    <input id="yearUnknown" type="checkbox" name="yearUnknown" value="Year Unknown" onclick="document.getElementById('year').disabled=this.checked; document.getElementById('year').value = '';">
+                    <label for="year-unknown">Year Unknown</label>
                 </p>
+
                 <label class="continent" for="continent">What continent is your coin from?</label>
                 <select id="continent" name="continent" required>
                     <option value="" hidden disabled selected>Select a role</option>
-                    <option value="north-america">North America</option>
-                    <option value="south-america">South America</option>
-                    <option value="europe">Europe</option>
-                    <option value="asia">Asia</option>
-                    <option value="middle-east">Middle East</option>
-                    <option value="africa">Africa</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Middle East">Middle East</option>
+                    <option value="Africa">Africa</option>
                 </select>
             </section>
 
@@ -42,60 +45,58 @@
                 <fieldset>
                     <legend>Is your coin gold?</legend>
 
-                    <input required id="yesGold" type="radio" value="yes" name="gold">
+                    <input required id="yesGold" type="radio" value="Yes" name="gold">
                     <label for="yesGold">Yes</label>
     
-                    <input required id="noGold" type="radio" value="no" name="gold">
+                    <input required id="noGold" type="radio" value="No" name="gold">
                     <label for="noGold">No</label>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Is it made up of multiple materials?</legend>
 
-                    <input required id="yesMulti" type="radio" value="yes" name="multiMaterial">
+                    <input required id="yes-multi" type="radio" value="Yes" name="multiMaterial">
                     <label for="yesMulti">Yes</label>
     
-                    <input required id="noMulti" type="radio" value="no" name="multiMaterial">
+                    <input required id="no-multi" type="radio" value="No" name="multiMaterial">
                     <label for="noMulti">No</label>
                 </fieldset> 
                 
                 <fieldset>
-                    <legend>
-                        What materails comprise your coin?
-                    </legend>
+                    <legend>What materails comprise your coin?</legend>
 
                     <div>
-                        <input name="material" value="gold" type="checkbox" id="gold">
+                        <input name="composition" value="gold" type="checkbox" id="gold">
                         <label for="gold">Gold</label>
                     </div>
     
                     <div>
-                        <input name="material" value="silver" type="checkbox" id="silver">
+                        <input name="composition" value="silver" type="checkbox" id="silver">
                         <label for="silver">Silver</label>
                     </div>
     
                     <div>
-                        <input name="material" value="copper" type="checkbox" id="copper">
+                        <input name="composition" value="copper" type="checkbox" id="copper">
                         <label for="copper">Copper</label>
                     </div>
     
                     <div>
-                        <input name="material" value="nickel" type="checkbox" id="nickel">
+                        <input name="composition" value="nickel" type="checkbox" id="nickel">
                         <label for="nickel">Nickel</label>
                     </div>
 
                     <div>
-                        <input name="material" value="brass" type="checkbox" id="brass">
+                        <input name="composition" value="brass" type="checkbox" id="brass">
                         <label for="brass">Brass</label>
                     </div>
 
                     <div>
-                        <input name="material" value="steel" type="checkbox" id="steel">
+                        <input name="composition" value="steel" type="checkbox" id="steel">
                         <label for="steel">Steel</label>
                     </div>
 
                     <div>
-                        <input name="material" value="zinc" type="checkbox" id="zinc">
+                        <input name="composition" value="zinc" type="checkbox" id="zinc">
                         <label for="zinc">Zinc</label>
                     </div>
                 </fieldset>
@@ -112,8 +113,12 @@
                 <button>Submit</button>
             </section>
         </form>
-        <a href="./index.html">Homepage</a>
+        <p>
+            <a class="something" href="./index.html">Homepage</a>
+            <a class="something" href="./listing-detail.html">Listing Detail</a>
+        </p>
     </main>
-    <script type="module" src="./src/product-form.js"></script>
+
+    <script type="module" src="./src/listing-form.js"></script>
 </body>
 </html>
