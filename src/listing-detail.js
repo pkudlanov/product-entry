@@ -9,9 +9,9 @@ const condition = document.getElementById('condition');
 
 const listing = listingApi.get();
 
-if(!listing) {
-    window.location = './';
-}
+// if(!listing) {
+//     window.location = './';
+// }
 
 if(listing.yearUnknown === 'Year Unknown'){
     year.textContent = listing.yearUnknown;
