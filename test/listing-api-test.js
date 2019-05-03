@@ -24,3 +24,18 @@ test('removing listings in local storage, returns empty array', function(assert)
 
     assert.deepEqual(listings, expected);
 });
+
+test('saving two entries returns two items', function(assert){
+    testStorage.removeItem('listings');
+
+    const listing1 = {name: 'coin1'};
+    const listing2 = {name: 'coin2'};
+    const expected = [listing1, listing2];
+
+    listingApi.save(listing1);
+    listingApi.save(listing2);
+
+    const listings = listingApi.getAll();
+    
+    assert.deepEqual(listings, expected);
+});
