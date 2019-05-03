@@ -10,7 +10,11 @@ for (let i = 0; i < listings.length; i++) {
     const tr = document.createElement('tr');
     
     const yearCell = document.createElement('td');
-    yearCell.textContent = listing.year;
+    if(listing.year === null){
+        yearCell.textContent = 'Unknown';
+    }else{
+        yearCell.textContent = listing.year;
+    }
     tr.appendChild(yearCell);
     
     const continentCell = document.createElement('td');
@@ -18,7 +22,7 @@ for (let i = 0; i < listings.length; i++) {
     tr.appendChild(continentCell);
     
     const goldCell = document.createElement('td');
-    goldCell.textContent = listing.gold;
+    goldCell.textContent = listing.goldOrNot;
     tr.appendChild(goldCell);
     
     const compositionCell = document.createElement('td');
