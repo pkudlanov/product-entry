@@ -15,4 +15,6 @@ form.addEventListener('submit', (event) =>{
     const formData = new FormData(form);
     const listing = makeCoinListing(formData);
     listingApi.save(listing);
+
+    window.location = '../thank-you.html';
 });
