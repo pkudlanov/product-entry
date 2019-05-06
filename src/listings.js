@@ -10,11 +10,14 @@ for (let i = 0; i < listings.length; i++) {
     const tr = document.createElement('tr');
     
     const yearCell = document.createElement('td');
+    const link = document.createElement('a');
+    link.href = 'listing-detail.html';
     if(listing.year === null){
-        yearCell.textContent = 'Unknown';
+        link.textContent = 'Unknown';
     }else{
-        yearCell.textContent = listing.year;
+        link.textContent = listing.year;
     }
+    yearCell.appendChild(link);
     tr.appendChild(yearCell);
     
     const continentCell = document.createElement('td');
