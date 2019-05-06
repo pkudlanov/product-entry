@@ -7,7 +7,10 @@ const multiMaterial = document.getElementById('yes-multi');
 const composition = document.getElementById('composition');
 const condition = document.getElementById('condition');
 
-const listing = listingApi.get();
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('year');
+
+const listing = listingApi.get(id);
 
 if(!listing) {
     window.location = './';

@@ -8,10 +8,12 @@ const testStorage = sessionStorage;
 
 test('round trip listing object', function(assert) {
     testStorage.removeItem('listings');
-    const listing = { continent: 'south america' };
+    const listing1 = { continent: 'south america' };
+    const listing2 = { continent: 'north america' };
 
-    listingApi.save(listing);
-    const result = listingApi.get();
+    listingApi.save(listing1);
+    listingApi.save(listing2);
+    const result = listingApi.get(listing2.continent);
 
     assert.deepEqual(result, listing);
 });

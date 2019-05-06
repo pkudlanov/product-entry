@@ -6,9 +6,16 @@ const listingApi = {
         const json = JSON.stringify(listings);
         listingApi.storage.setItem('listings', json);
     },
-    get() {
+    get(year) {
         const listings = listingApi.getAll();
-        return listings[0];
+
+        for(let i = 0; i < listings.length; i++) {
+            const listing = listings[i];
+            if(listing.year === year) {
+                console.log(listing);
+                return listing;
+            }
+        }
 
     },
     getAll() {
