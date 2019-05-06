@@ -12,9 +12,7 @@ const id = searchParams.get('year');
 
 const listing = listingApi.get(id);
 
-if(!listing) {
-    window.location = './';
-}
+// li
 
 if(listing.yearUnknown === 'Year Unknown'){
     year.textContent = listing.yearUnknown;
