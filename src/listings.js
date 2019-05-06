@@ -11,7 +11,9 @@ for (let i = 0; i < listings.length; i++) {
     
     const yearCell = document.createElement('td');
     const link = document.createElement('a');
-    link.href = 'listing-detail.html';
+    const searchParams = new URLSearchParams();
+    searchParams.set('name', listing.year);
+    link.href = 'listing-detail.html?' + searchParams.toString();
     if(listing.year === null){
         link.textContent = 'Unknown';
     }else{
