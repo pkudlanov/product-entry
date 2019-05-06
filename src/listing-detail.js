@@ -1,4 +1,4 @@
-import listingApi from './listing-api.js'
+import listingApi from './listing-api.js';
 
 const year = document.getElementById('year');
 const continent = document.getElementById('continent');
@@ -16,7 +16,7 @@ const listing = listingApi.get(id);
 
 if(listing.yearUnknown === 'Year Unknown'){
     year.textContent = listing.yearUnknown;
-}else{
+} else {
     year.textContent = listing.year;
 }
 

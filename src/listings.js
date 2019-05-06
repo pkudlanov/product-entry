@@ -4,7 +4,7 @@ const tbody = document.getElementById('listings');
 
 const listings = listingApi.getAll();
 
-for (let i = 0; i < listings.length; i++) {
+for(let i = 0; i < listings.length; i++) {
     const listing = listings[i];
 
     const tr = document.createElement('tr');
@@ -16,7 +16,7 @@ for (let i = 0; i < listings.length; i++) {
     link.href = 'listing-detail.html?' + searchParams.toString();
     if(listing.year === null){
         link.textContent = 'Unknown';
-    }else{
+    } else {
         link.textContent = listing.year;
     }
     yearCell.appendChild(link);

@@ -1,7 +1,7 @@
 import listingApi from '../src/listing-api.js';
 const test = QUnit.test;
 
-QUnit.module('listing api')
+QUnit.module('listing api');
 
 listingApi.storage = sessionStorage;
 const testStorage = sessionStorage;
@@ -15,7 +15,7 @@ test('round trip listing object', function(assert) {
     listingApi.save(listing2);
     const result = listingApi.get(listing2.continent);
 
-    assert.deepEqual(result, listing);
+    assert.deepEqual(result, listing1);
 });
 
 test('removing listings in local storage, returns empty array', function(assert){
@@ -30,8 +30,8 @@ test('removing listings in local storage, returns empty array', function(assert)
 test('saving two entries returns two items', function(assert){
     testStorage.removeItem('listings');
 
-    const listing1 = {name: 'coin1'};
-    const listing2 = {name: 'coin2'};
+    const listing1 = { name: 'coin1' };
+    const listing2 = { name: 'coin2' };
     const expected = [listing1, listing2];
 
     listingApi.save(listing1);

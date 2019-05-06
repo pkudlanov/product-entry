@@ -1,5 +1,5 @@
-import makeCoinListing from './make-coin-listing.js'
-import listingApi from './listing-api.js'
+import makeCoinListing from './make-coin-listing.js';
+import listingApi from './listing-api.js';
 
 const form = document.getElementById('coin-listing');
 
