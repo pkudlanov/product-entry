@@ -6,7 +6,7 @@ QUnit.module('listing api');
 listingApi.storage = sessionStorage;
 const testStorage = sessionStorage;
 
-test('round trip listing object', function(assert) {
+test('round trip listing object', function(assert){
     testStorage.removeItem('listings');
     const listing1 = { year: 'south america' };
     const listing2 = { year: 'north america' };
@@ -15,7 +15,6 @@ test('round trip listing object', function(assert) {
     listingApi.save(listing2);
     const result = listingApi.get(listing2.year);
 
-    console.log(listingApi.get(listing2.year));
     assert.deepEqual(result, listing2);
 });
 
