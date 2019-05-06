@@ -15,7 +15,7 @@ test('round trip listing object', function(assert) {
     listingApi.save(listing2);
     const result = listingApi.get(listing2.continent);
 
-    assert.deepEqual(result, listing1);
+    assert.deepEqual(result, listing2);
 });
 
 test('removing listings in local storage, returns empty array', function(assert){

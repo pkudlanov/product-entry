@@ -12,7 +12,6 @@ const listingApi = {
         for(let i = 0; i < listings.length; i++) {
             const listing = listings[i];
             if(listing.year === year) {
-                console.log(listing);
                 return listing;
             }
         }
