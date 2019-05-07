@@ -7,15 +7,16 @@ const multiMaterial = document.getElementById('yes-multi');
 const composition = document.getElementById('composition');
 const condition = document.getElementById('condition');
 
+
 const searchParams = new URLSearchParams(window.location.search);
-const id = searchParams.get('year');
+let id = searchParams.get('year');
+console.log(id, 'id');
 
 const listing = listingApi.get(id);
-
-// li
-
+console.log(searchParams, 'search');
+console.log(listing, 'yo');
 if(listing.yearUnknown === 'Year Unknown'){
-    year.textContent = listing.yearUnknown;
+    year.textContent = 'Unknown';
 } else {
     year.textContent = listing.year;
 }

@@ -13,6 +13,8 @@ const listingApi = {
             const listing = listings[i];
             if(listing.year === year) {
                 return listing;
+            } else if(listing.year === null) {
+                return listing;
             }
         }
 
